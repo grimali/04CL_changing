@@ -35,7 +35,30 @@ pip install -r requirements.txt
 
 
 ## Usage
-The code can be run using the following command:
+Run a detection experiment
 ```console
- python run test_sample.py
+python variant_experiment_optimization.py --ocel_path datasets/your_log.xes
+
 ```
+This script will:
+
+   - Generate structural and temporal profiles for each trace.
+
+   - Build a k-NN graph and detect communities.
+
+  - Compute structural node metrics.
+
+  - Apply a One-Class SVM to detect anomalous variants.
+
+  -  Save results in resultados_ai4bpm/.
+### Hyperparameter Optimization
+
+The pipeline uses DEAP for evolutionary optimization of:
+
+   - k: Number of neighbors in k-NN
+
+   - w: Wavelet resolution
+
+   - r: Louvain resolution for community detection
+
+   - ν and γ: SVM hyperparameters
