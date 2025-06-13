@@ -1,5 +1,5 @@
 # O4CL_changing
-
+A new method employing graph-based modeling using to connect similar traces and apply community detection techniques to identify clusters of related trace variants. 
 
 
 
