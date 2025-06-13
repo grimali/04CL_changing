@@ -62,3 +62,9 @@ The pipeline uses DEAP for evolutionary optimization of:
    - r: Louvain resolution for community detection
 
    - ν and γ: SVM hyperparameters
+
+Run:
+```console
+python variant_experiment_optimization.py --ocel_path datasets/your_log.xes
+
+```
