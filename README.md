@@ -1,26 +1,36 @@
 # Variant Shift Detection via Multi-Dimensional Profiling and Graph Modeling
 This repository provides an implementation for detecting trace variant shifts in business processes using multi-dimensional profiling, wavelet transforms, and graph-based community detection.
 
-##Overview
-This approach combines:
+## Overview
+The main goal is to reveal subtle variant shifts by:
 
-Multi-dimensional profiling: activities, transitions, and temporal dynamics (using discrete wavelet transforms)
+   - Multi-dimensional profiling (activity sequences, transitions, and temporal dynamics using wavelets)
 
-k-NN graph modeling: similarity graphs based on Levenshtein and Euclidean distances
+   - Building k-NN graphs based on Levenshtein and Euclidean distances
 
-Community detection: Louvain clustering to find behavior clusters
+   - Detecting communities to identify clusters of similar behavior
 
-Anomaly detection: One-Class SVM for spotting variant shifts
+   - Spotting anomalies using One-Class SVM
 
-This enables fine-grained monitoring and retrospective analysis of process evolution.
+This technique helps detect fine-grained, localized process changes, supporting both real-time monitoring and retrospective audits.
 
 
 
 ## Installation
-The required packages can be installed using the following command in a terminal:
+1. Clone this repository: 
 
 ```console
- pip install -r requirements.txt
+https://github.com/grimali/04CL_changing.git
+cd AI4BPM
+
+```
+2. Create a virtual environment and install dependencies:
+```console
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+pip install -r requirements.txt
+
+
 ```
 
 
